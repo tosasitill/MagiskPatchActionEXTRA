@@ -545,8 +545,7 @@ remove_system_su() {
 }
 
 api_level_arch_detect() {
-  API=${{ github.event.inputs.ANDROID_SDK }}
-  ABI=${{ github.event.inputs.CPU_TYPE }}
+  ABI=$TYPE
   if [ "$ABI" = "x86" ]; then
     ARCH=x86
     ABI32=x86
